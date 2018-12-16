@@ -41,7 +41,7 @@ import com.qualcomm.robotcore.util.ElapsedTime;
  * Remove a @Disabled the on the next line or two (if present) to add this opmode to the Driver Station OpMode list,
  * or add a @Disabled annotation to prevent this OpMode from being added to the Driver Station
  */
-@Autonomous(name="CraterAutonomous 1.4.6 (Experimental)", group="Linear Opmode")
+@Autonomous(name="CraterAutonomous 1.4.6 (Recommended)", group="Linear Opmode")
 
 public class TestAutonomous2 extends LinearOpMode {
     //MOTORS
