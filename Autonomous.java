@@ -41,9 +41,9 @@ import com.qualcomm.robotcore.util.ElapsedTime;
  * Remove a @Disabled the on the next line or two (if present) to add this opmode to the Driver Station OpMode list,
  * or add a @Disabled annotation to prevent this OpMode from being added to the Driver Station
  */
-@Autonomous(name="DepotAutonomous 1.4.5 (Recommended)", group="Linear Opmode")
+@Autonomous(name="DepotAutonomous 1.4.6 (Recommended)", group="Linear Opmode")
 
-public class StableAutonomous extends LinearOpMode {
+public class TestAutonomous extends LinearOpMode {
     //MOTORS
     //Left wheel motor
     private DcMotor leftDrive = null;
@@ -271,17 +271,20 @@ public class StableAutonomous extends LinearOpMode {
             //Move hook arm all the way up to lower robot
             eleSet(20000,1);
             //Move hook servo down and wait
-            servoSet(1,0,0.75);
+            servoSet(1,0,0.4);
             waitSeconds(1);
-            //Drive forward 80 cm
-            driveCm(80,-1,1);
+            //Drive forward 86 cm
+            driveCm(86,-1,1);
             //Deploy arm to drop team marker
-            servoSet(0,1,0.75);
-            cupSet(600,1);
-            waitSeconds(3);
+            cupSet(450,1);
+            servoSet(0.3,0.3,0.4);
+            waitSeconds(2);
             //Retract arm
-            servoSet(1,0,0.75);
-            waitSeconds(3);
+            servoSet(0.3,1,0.4);
+            waitSeconds(2);
+            cupSet(300,1);
+            servoSet(1,0,0.4);
+            waitSeconds(2);
             //-----------------END OF DRIVE FUNCTIONS-------------------
             //Not sure if this is necessary
             telemetry.addData("Status", "Run Time: " + runtime.toString());
